@@ -1,20 +1,16 @@
 @extends('layouts.index')
-@section('title', 'Posts')
+@section('title', $post->title)
 
 @section('content')
-@foreach($posts as $post)
 @if($post -> type =='text')
 <article class="post formatText">
     <div class="postContent">
         <div class="wrapper">
             <h2 class="postTitle">
-                <a href="/posts/{{ $post->id }}">{{ $post->title }}</a>
+                <a href="#">{{ $post->title }}</a>
             </h2>
             <div class="rte">
                 {!! $post -> content !!}
-                <p class="readMore">
-                    <a href="/posts/{{ $post->id }}">Keep reading</a>
-                </p>
             </div>
         </div>
     </div>
@@ -40,7 +36,7 @@
 <article class="post formatPhoto">
     <figure class="postImage">
         <i class="postPremium fa fa-star"></i>
-        <a href="/posts/{{ $post->id }}">
+        <a href="#">
             <img src="{{ $post -> image}}" alt="" class="mainPhoto">
         </a>
         <div class="cover" style="background: url(https://lorempixel.com/1200/800/?27293) no-repeat;">
@@ -65,5 +61,4 @@
     </div>
 </article>
 @endif
-@endforeach
 @endsection
