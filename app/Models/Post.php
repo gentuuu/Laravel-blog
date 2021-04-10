@@ -22,5 +22,10 @@ class Post extends Model
     public function getRouteKeyName(){
         return 'slug';
     }
+
+    // funkcja przycina tekst, strip_tags ucina teksk z zachowaniem znaków HTML(np <b> <stong>)
+    public function getExcerptAttribute(){
+        return Str::limit(strip_tags($this->content), 30) ;
+    }
     
 }
