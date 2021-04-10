@@ -8,10 +8,10 @@ use App\Models\Post;
 
 class PostController extends Controller
 {
-    public function index()
+    public function index(Request $request)
     {
      
-        $posts = Post::latest('date')->get();
+        $posts = Post::latest('date')->paginate(2);
 
         return view('pages.posts', compact('posts'));
     }

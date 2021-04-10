@@ -66,4 +66,7 @@
 </article>
 @endif
 @endforeach
+
+@include('partials.pagination', ['pagination' => $posts])
+
 @endsection

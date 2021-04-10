@@ -19,3 +19,6 @@ dodawanie randomowych wpisów do bazy
 
  {{ $post->date->diffForHUmans() }}
  zwraca czas kiedy dany element został dodany
+
+ {{ $posts->links() }}
+ paginacja 1 2 3
