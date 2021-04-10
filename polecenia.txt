@@ -12,3 +12,7 @@ czyści bazę danych
 
 php artisan db:seed --class=PostsTableSeeder
 dodawanie randomowych wpisów do bazy
+
+
+ {!! request()->routeis('about') ? ' class="is-active"' : '' !!}
+ wyświetlanie się aktywnego linku
