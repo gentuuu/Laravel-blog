@@ -16,3 +16,6 @@ dodawanie randomowych wpisów do bazy
 
  {!! request()->routeis('about') ? ' class="is-active"' : '' !!}
  wyświetlanie się aktywnego linku
+
+ {{ $post->date->diffForHUmans() }}
+ zwraca czas kiedy dany element został dodany
